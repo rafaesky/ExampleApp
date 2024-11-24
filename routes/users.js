@@ -8,6 +8,20 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+  //If had connection with mySql
+  // mysql.getConnection((error, conn) = {
+  //   conn.query('INSERT INTO users(nome) VALUES (?,?)',
+  //     [req.body.nome],
+  //       (error, result, field) =>
+  //     { conn.release(); 
+  // if(error){
+  //   res.status(500).send({
+  //     error: error,
+  //     response: null
+  //   });
+  // }}
+  //   )
+  // })
   const user = {
     nome: req.body.name
   }
