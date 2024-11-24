@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const userRoute = require("./routes/users");
+const productRoute = require("./routes/products");
 
 app.use(bodyParser.urlencoded({ extended: false })) // Simple Data
 app.use(bodyParser.json()) // Only Json
@@ -18,13 +20,16 @@ app.use((req, res, next) => {
   }
   next();
 })
-const userRoute = require("./routes/users");
+
 app.use('/users', userRoute);
+app.use('/products', productRoute);
+
 app.use((req, res, next) => {
   const error = new Error('Not find');
   error.status = 404;
   next(error);
 })
+
 app.use((error, req, res, next) => {
   res.status = error.status || 500;
   return res.send({
@@ -33,4 +38,5 @@ app.use((error, req, res, next) => {
     },
   });
 });
+
 module.exports = app;

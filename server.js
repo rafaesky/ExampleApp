@@ -3,6 +3,7 @@ const http = require('http')
 const port = process.env.PORT || 3000
 
 //last line of code
-app.listen(port, function () {
+const server = http.createServer(app);
+server.listen(port, function () {
   console.log("Servidor rodando na URL: http://localhost:" + port)
 })
