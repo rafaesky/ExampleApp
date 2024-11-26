@@ -27,4 +27,12 @@ export class Database {
     const data = this.#database[table] ?? []
     return data
   }
+  delete(table, id) {
+    const rowIdx = this.#database[table].findIndex(row => row.id == id);
+    if (rowIdx > -1) {
+      this.#database[table].splice(rowIdx, 1)
+      this.#persist()
+    }
+
+  }
 }
