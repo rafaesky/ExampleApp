@@ -5,22 +5,28 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "test": "vitest",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts"
   },
   "keywords": [],
   "author": "Erika Rafaesky Santos",
   "license": "ISC",
   "dependencies": {
+    "-": "^0.0.1",
     "@fastify/cookie": "^7.4.0",
     "@fastify/diagnostics-channel": "^4.2.0",
+    "D": "^1.0.0",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1",
     "knex": "^3.1.0",
     "sqlite3": "^5.1.7",
+    "vitest": "^2.1.6",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
