@@ -11,6 +11,7 @@
   "author": "Erika Rafaesky Santos",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cookie": "^7.4.0",
     "@fastify/diagnostics-channel": "^4.2.0",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1",
