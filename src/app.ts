@@ -4,7 +4,7 @@ import { transactionsRoutes } from './routes/transactions'
 
 export const app = fastify()
 app.addHook('preHandler', async (request, reply) => {
-  console.log("Teste")
+  console.log("Initiating the App")
 })
 app.register(cookie)
 app.register(transactionsRoutes, { prefix: 'transactions' })
