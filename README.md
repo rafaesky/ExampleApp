@@ -1,3 +1,3 @@
-# SOLIDAPI
+# APP
 
 GymPass Style App
